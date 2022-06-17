@@ -37,6 +37,7 @@ namespace BNG {
 
         [Tooltip("Name of the prefab used to create an arrow. Must be in a /Resources/ directory.")]
         public string ArrowPrefabName = "Arrow2";
+        public GameObject ArrowPrefab;
 
         [Tooltip("Arrow will rotate around this if bow is being held in right hand")]
         public Transform ArrowRestLeftHanded; // Arrow will rotate around this
@@ -125,7 +126,7 @@ namespace BNG {
             // Grab an arrow by holding trigger in grab area
             if (canGrabArrowFromKnock()) {
 
-                GameObject arrow = Instantiate(Resources.Load(ArrowPrefabName, typeof(GameObject))) as GameObject;
+                GameObject arrow = Instantiate(ArrowPrefab);
                 arrow.transform.position = ArrowKnock.transform.position;
                 arrow.transform.LookAt(getArrowRest());
 
