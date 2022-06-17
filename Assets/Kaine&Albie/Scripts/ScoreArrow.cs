@@ -29,14 +29,14 @@ public class ScoreArrow : MonoBehaviour
             float playerDistance = Vector3.Distance(playerRef.transform.position, collision.transform.position);
             int scoresimple = (int)(10 - (distance * 10));
             Debug.Log("Simple Score: " + scoresimple);
-            int compoundscore = (int)((10 - (distance * 10)) + playerDistance / 10);
+            int compoundscore = (int)(scoresimple + playerDistance / 3);
 
             Debug.Log("Compound Score: " + compoundscore);
             compoundscore *= 10;
 
             Vector3 targetVector = playerRef.transform.position - transform.position;
 
-            GameObject scoreC = Instantiate(scorecnavas, collision.transform.position + new Vector3(Random.Range(0, 1f), 0.5f, 0.5f), 
+            GameObject scoreC = Instantiate(scorecnavas, collision.transform.position + new Vector3(Random.Range(0, 1f), 0.5f, 0.5f),
             Quaternion.LookRotation(targetVector, Vector3.up));
             scoreC.gameObject.transform.GetChild(0).gameObject.GetComponent<TMP_Text>().text = compoundscore.ToString();
         }

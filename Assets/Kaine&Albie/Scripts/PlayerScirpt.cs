@@ -48,7 +48,7 @@ public class PlayerScirpt : MonoBehaviour
         InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
         InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics, devices);
 
-        if (devices.Count < 0) return;
+        if (devices.Count <= 0) return;
 
         InputDevice rightController = devices[0];
 
@@ -73,7 +73,7 @@ public class PlayerScirpt : MonoBehaviour
         InputDeviceCharacteristics leftControllerCharacteristics = InputDeviceCharacteristics.Left | InputDeviceCharacteristics.Controller;
         InputDevices.GetDevicesWithCharacteristics(leftControllerCharacteristics, devices);
 
-        if (devices.Count < 0) return;
+        if (devices.Count <= 0) return;
 
         InputDevice leftController = devices[0];
 

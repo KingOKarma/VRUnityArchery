@@ -3,7 +3,32 @@ guid: 6b7a64aac80b2e44ea4fd648c573de6b
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OutlineBlack
+    second: {fileID: 2100000, guid: 95bf59bc3daefe042bee6716371d0caf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OutlineBlue
+    second: {fileID: 2100000, guid: 21682352cece49a469ce3ce1d834074f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OutlineGold
+    second: {fileID: 2100000, guid: 38b0d9cde737f0141b0cb885014f45b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OutlineRed
+    second: {fileID: 2100000, guid: 3e296ea653085b54abc4b418c46f8294, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OutlineWhite
+    second: {fileID: 2100000, guid: f1a5227281f99da4d864ef308de1500a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
