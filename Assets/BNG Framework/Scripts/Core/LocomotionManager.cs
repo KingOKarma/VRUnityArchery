@@ -95,7 +95,7 @@ namespace BNG {
         }
 
         public void UpdateTeleportStatus() {
-            teleport.enabled = SelectedLocomotion == LocomotionType.Teleport;
+            teleport.enabled = false;
         }
 
         public void ChangeLocomotion(LocomotionType locomotionType, bool save) {

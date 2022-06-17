@@ -8,31 +8,25 @@ public class ScoreArrow : MonoBehaviour
     [SerializeField]
     GameObject scorecnavas;
     // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Target")
         {
+            
+            
             GameObject playerRef = GameObject.FindGameObjectWithTag("Player");
             float distance = Vector3.Distance(collision.gameObject.transform.position, collision.contacts[0].point);
             //make ui send distance *10 
 
             float playerDistance = Vector3.Distance(playerRef.transform.position, collision.transform.position);
+
             int scoresimple = (int)(10 - (distance * 10));
-            Debug.Log("Simple Score: " + scoresimple);
+
             int compoundscore = (int)(scoresimple + playerDistance / 3);
 
-            Debug.Log("Compound Score: " + compoundscore);
             compoundscore *= 10;
+            Debug.Log("Compound Score: " + compoundscore);
 
             Vector3 targetVector = playerRef.transform.position - transform.position;
 

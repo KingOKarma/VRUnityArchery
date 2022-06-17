@@ -26,7 +26,8 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: -1580535799172915004, guid: 6b7a64aac80b2e44ea4fd648c573de6b,
+    type: 3}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -188,7 +189,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &332531472
 PrefabInstance:
@@ -371,6 +372,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8262508071809487658, guid: 0b1e90499b61d8f48bb3c2098719c1ce,
+        type: 3}
+      propertyPath: shouldRotate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262508071809487658, guid: 0b1e90499b61d8f48bb3c2098719c1ce,
+        type: 3}
+      propertyPath: RotationSpeed
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b1e90499b61d8f48bb3c2098719c1ce, type: 3}
 --- !u!1 &388418668 stripped
@@ -394,7 +405,7 @@ PrefabInstance:
     - target: {fileID: 4377868628658478902, guid: 0b1e90499b61d8f48bb3c2098719c1ce,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4377868628658478902, guid: 0b1e90499b61d8f48bb3c2098719c1ce,
         type: 3}
@@ -463,7 +474,7 @@ PrefabInstance:
     - target: {fileID: 4377868628658478902, guid: 0b1e90499b61d8f48bb3c2098719c1ce,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4377868628658478902, guid: 0b1e90499b61d8f48bb3c2098719c1ce,
         type: 3}
@@ -659,6 +670,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8262508071809487658, guid: 0b1e90499b61d8f48bb3c2098719c1ce,
+        type: 3}
+      propertyPath: shouldRotate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b1e90499b61d8f48bb3c2098719c1ce, type: 3}
 --- !u!1001 &6233841317848254945
@@ -668,6 +684,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1190374283449249888, guid: fdf5631ec94f80c4489d996cd2caedda,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 12dc05bc461264e40aa58240d9538398, type: 2}
     - target: {fileID: 3200794442976602709, guid: fdf5631ec94f80c4489d996cd2caedda,
         type: 3}
       propertyPath: m_RootOrder
@@ -733,5 +754,15 @@ PrefabInstance:
       propertyPath: ToolTipForGrip
       value: 
       objectReference: {fileID: 388418668}
+    - target: {fileID: 6457161911043962236, guid: fdf5631ec94f80c4489d996cd2caedda,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 12dc05bc461264e40aa58240d9538398, type: 2}
+    - target: {fileID: 6620897525027229241, guid: fdf5631ec94f80c4489d996cd2caedda,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdf5631ec94f80c4489d996cd2caedda, type: 3}
