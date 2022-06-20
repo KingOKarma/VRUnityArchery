@@ -7,6 +7,21 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 96f8788c3bf3c2e4e875ce30f294a60c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue
+    second: {fileID: 2100000, guid: 96f8788c3bf3c2e4e875ce30f294a60c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gold
+    second: {fileID: 2100000, guid: 96f8788c3bf3c2e4e875ce30f294a60c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: OutlineBlack
     second: {fileID: 2100000, guid: 95bf59bc3daefe042bee6716371d0caf, type: 2}
   - first:
@@ -29,6 +44,21 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: OutlineWhite
     second: {fileID: 2100000, guid: f1a5227281f99da4d864ef308de1500a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red
+    second: {fileID: 2100000, guid: 96f8788c3bf3c2e4e875ce30f294a60c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 96f8788c3bf3c2e4e875ce30f294a60c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: 96f8788c3bf3c2e4e875ce30f294a60c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
