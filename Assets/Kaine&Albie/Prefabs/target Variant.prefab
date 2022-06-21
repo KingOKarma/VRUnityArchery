@@ -225,7 +225,7 @@ Animator:
   m_GameObject: {fileID: 1478942300461825970}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1aca744cfcf9d1d418270e2e2f3cbc67, type: 2}
+  m_Controller: {fileID: 9100000, guid: fa71dc3a616967e488b72d18a394039f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -275,6 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shouldRotate: 0
   RotationSpeed: 5
+  prefab: {fileID: 4002153048325719436}
 --- !u!4 &6303844435232436464 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1427596884458567635, guid: 6b7a64aac80b2e44ea4fd648c573de6b,
