@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Target
+  - Timer
+  - StartGame
+  - Arrow
   layers:
   - Default
   - TransparentFX
@@ -12,12 +15,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Wall
+  - Arrow
   - Restricted
   - Player
   - Grabbable
-  - 
+  - CustomUI
   - 
   - 
   - 

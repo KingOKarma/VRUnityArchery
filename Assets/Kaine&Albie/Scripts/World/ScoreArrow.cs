@@ -9,10 +9,6 @@ public class ScoreArrow : MonoBehaviour
     GameObject scorecnavas;
     // Start is called before the first frame update
 
-    void Start()
-    {
-       //PlayerPrefs.SetInt("HighScore", 0);
-    }
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Target")
@@ -31,7 +27,7 @@ public class ScoreArrow : MonoBehaviour
             int scoresimple = (int)(10 - (distance * 10));
 
             // Add onto score based on players distance from the target
-            int compoundscore = (int)(scoresimple + playerDistance / 3);
+            int compoundscore = (int)(scoresimple + playerDistance / 10);
 
             // Put score into the 100s
             compoundscore *= 10;
@@ -70,6 +66,7 @@ public class ScoreArrow : MonoBehaviour
             int currentScore = PlayerPrefs.GetInt("CurrentScore") + compoundscore;
 
             PlayerPrefs.SetInt("CurrentScore", currentScore);
+
 
             if (currentScore >= PlayerPrefs.GetInt("HighScore"))
             {

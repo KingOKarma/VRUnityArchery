@@ -11,10 +11,13 @@ public class TextScript : MonoBehaviour
     private GameObject uiTextObject;
     private TMP_Text uiText;
 
+    private GameObject timer;
+
+
     void Start()
     {
         Destroy(this.gameObject, 3f);
-
+        timer = GameObject.FindGameObjectWithTag("Timer");
         uiText = uiTextObject.GetComponent<TMP_Text>();
 
         if (!uiText)
@@ -31,14 +34,23 @@ public class TextScript : MonoBehaviour
 
         if (score < 80)
         {
+            // +1 Sec everytime you score
+            timer.gameObject.GetComponent<Timer>().AddTime(1);
+            // Set text to grey when low score
             uiText.color = Color.gray;
         }
         else if (score < 100)
         {
+            // +5 Secs everytime you score
+            timer.gameObject.GetComponent<Timer>().AddTime(5);
+            // Set text to green when good score
             uiText.color = Color.green;
         }
         else
         {
+            // +10 Secs everytime you score
+            timer.gameObject.GetComponent<Timer>().AddTime(10);
+            // Set text to gold when high score
             Color gold = new Color(255, 215, 0);
             uiText.color = gold;
         }
