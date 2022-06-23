@@ -20,6 +20,7 @@ public class Timer : MonoBehaviour
     {
         interval = startTime;
         uiText = gameObject.GetComponent<TMP_Text>();
+        GameEvents.current.onStartGame += StartGame;
 
     }
 
@@ -30,9 +31,13 @@ public class Timer : MonoBehaviour
         {
             interval -= Time.deltaTime;
 
-            uiText.SetText(((int) interval).ToString());
+            uiText.SetText(((int)interval).ToString());
 
-            if (interval <= 0) timerStart = false;
+            if (interval <= 0) 
+            {
+                timerStart = false;
+                GameEvents.current.EndGame();
+            }
 
         }
 
@@ -52,7 +57,7 @@ public class Timer : MonoBehaviour
             timerStart = true;
             if (newStartTime != null)
             {
-                interval = (int)newStartTime;
+                interval = (int)newStartTime + 1;
             }
             else
             {
@@ -64,6 +69,29 @@ public class Timer : MonoBehaviour
             timerStart = false;
             interval = 0;
         }
+    }
+
+    void StartGame()
+    {
+        int diffStartTime = 60;
+        string diff = PlayerPrefs.GetString("Difficulty");
+
+        switch (diff)
+        {
+            case "easy":
+                diffStartTime = 90;
+                break;
+
+            case "normal":
+                diffStartTime = 60;
+                break;
+
+            case "hard":
+                diffStartTime = 30;
+                break;
+
+        }
+        StartCountdown(true, diffStartTime);
     }
 
 }

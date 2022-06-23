@@ -27,12 +27,6 @@ public class PlayerScirpt : MonoBehaviour
     private bool isRightGripping;
     private GameObject SpanwedObject;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log("Start");
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -97,7 +91,6 @@ public class PlayerScirpt : MonoBehaviour
     void RightControllerGrip()
     {
         if (!RightHandLocation) return;
-        Debug.Log("Right Controller Gripping");
         SpanwedObject = Instantiate(ToSpawnInHand, RightHandLocation.transform.position, RightHandLocation.transform.rotation);
 
     }
@@ -114,7 +107,6 @@ public class PlayerScirpt : MonoBehaviour
         {
             Destroy(ToolTipForGrip);
         }
-        Debug.Log("Left Controller Gripping");
         SpanwedObject = Instantiate(ToSpawnInHand, LeftHandLocation.transform.position, LeftHandLocation.transform.rotation);
 
     }

@@ -7,6 +7,8 @@ public class WorldScoreScript : MonoBehaviour
 {
     [SerializeField]
     private bool isHighScore = false;
+    [SerializeField]
+    private GameEvents.difficulty difficultyHighScore;
 
     private TMP_Text uiText;
 
@@ -23,7 +25,23 @@ public class WorldScoreScript : MonoBehaviour
 
         if (isHighScore)
         {
-            uiText.SetText(PlayerPrefs.GetInt("HighScore").ToString());
+            switch (difficultyHighScore.ToString())
+            {
+                case "easy":
+                    uiText.SetText(PlayerPrefs.GetInt("easyHighScore").ToString());
+
+                    break;
+
+                case "normal":
+                    uiText.SetText(PlayerPrefs.GetInt("normalHighScore").ToString());
+
+                    break;
+
+                case "hard":
+                    uiText.SetText(PlayerPrefs.GetInt("hardHighScore").ToString());
+
+                    break;
+            }
 
         }
         else

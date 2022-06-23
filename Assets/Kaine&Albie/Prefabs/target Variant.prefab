@@ -197,6 +197,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: target Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6b7a64aac80b2e44ea4fd648c573de6b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Target
+      objectReference: {fileID: 0}
     - target: {fileID: 9043621831622440160, guid: 6b7a64aac80b2e44ea4fd648c573de6b,
         type: 3}
       propertyPath: m_CastShadows
@@ -254,7 +259,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: fa71dc3a616967e488b72d18a394039f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 

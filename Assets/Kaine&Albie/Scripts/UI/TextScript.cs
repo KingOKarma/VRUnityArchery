@@ -26,7 +26,6 @@ public class TextScript : MonoBehaviour
             return;
         }
 
-        Debug.Log(uiText.text);
         int score;
         bool didParse = int.TryParse(uiText.text, out score);
 

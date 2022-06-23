@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 964098655434914231, guid: 95fa1fd3c47aafe4ca02325a6550bb9c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4816807091062817941, guid: 95fa1fd3c47aafe4ca02325a6550bb9c,
         type: 3}
       propertyPath: m_Drag
@@ -46,6 +51,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: XR Rig Rigidbody Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8856482806898482649, guid: 95fa1fd3c47aafe4ca02325a6550bb9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8856482806898482651, guid: 95fa1fd3c47aafe4ca02325a6550bb9c,
         type: 3}
@@ -126,6 +136,7 @@ MonoBehaviour:
     type: 3}
   RightHandLocation: {fileID: 9185327675297286358}
   LeftHandLocation: {fileID: 5136608734653325305}
+  ToolTipForGrip: {fileID: 0}
 --- !u!1 &5136608734653325305 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1282377779501721719, guid: 95fa1fd3c47aafe4ca02325a6550bb9c,

@@ -26,8 +26,29 @@ public class ScoreArrow : MonoBehaviour
             // Make score generalised from the distance var and make int
             int scoresimple = (int)(10 - (distance * 10));
 
+            int distanceMultipler = 10;
+
+            string diff = PlayerPrefs.GetString("Difficulty");
+
+            switch (diff)
+            {
+                case "easy":
+                    distanceMultipler = 5;
+                    break;
+
+                case "normal":
+                    distanceMultipler = 10;
+                    break;
+
+                case "hard":
+                    distanceMultipler = 12;
+                    break;
+
+            }
+
+
             // Add onto score based on players distance from the target
-            int compoundscore = (int)(scoresimple + playerDistance / 10);
+            int compoundscore = (int)(scoresimple + playerDistance / distanceMultipler);
 
             // Put score into the 100s
             compoundscore *= 10;
@@ -63,16 +84,19 @@ public class ScoreArrow : MonoBehaviour
             // Disable any kind of collison with the object
             collision.gameObject.GetComponent<Collider>().isTrigger = true;
 
+            // Stop rotation if the target is rotating
+            collision.gameObject.transform.parent.parent.GetComponent<ArrowTargetScript>().StartRotate(false);
+
             int currentScore = PlayerPrefs.GetInt("CurrentScore") + compoundscore;
 
             PlayerPrefs.SetInt("CurrentScore", currentScore);
 
 
-            if (currentScore >= PlayerPrefs.GetInt("HighScore"))
+            if (currentScore >= PlayerPrefs.GetInt(diff + "HighScore"))
             {
-                Debug.Log("NEW High Score: " + PlayerPrefs.GetInt("HighScore"));
+                Debug.Log("NEW High Score: " + PlayerPrefs.GetInt(diff + "HighScore"));
 
-                PlayerPrefs.SetInt("HighScore", currentScore);
+                PlayerPrefs.SetInt(diff + "HighScore", currentScore);
             }
 
         }

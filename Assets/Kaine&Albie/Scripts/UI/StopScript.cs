@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartScript : MonoBehaviour
+public class StopScript : MonoBehaviour
 {
 
-    void Start()
-    {
-        GameEvents.current.onEndGame += StopGame;
-    }
 
-    void StopGame()
+    public void ShowStopButton()
     {
         gameObject.SetActive(true);
+    }
+
+        public void HideStopButton()
+    {
+        gameObject.SetActive(false);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -20,7 +21,7 @@ public class StartScript : MonoBehaviour
         if (collision.gameObject.tag == "Arrow")
         {
             gameObject.SetActive(false);
-            GameEvents.current.StartButton();
+            GameEvents.current.EndGame();
         }
     }
 }
