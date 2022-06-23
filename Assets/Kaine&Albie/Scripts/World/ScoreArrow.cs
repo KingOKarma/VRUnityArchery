@@ -33,15 +33,15 @@ public class ScoreArrow : MonoBehaviour
             switch (diff)
             {
                 case "easy":
-                    distanceMultipler = 5;
+                    distanceMultipler = 3;
                     break;
 
                 case "normal":
-                    distanceMultipler = 10;
+                    distanceMultipler = 5;
                     break;
 
                 case "hard":
-                    distanceMultipler = 12;
+                    distanceMultipler = 10;
                     break;
 
             }

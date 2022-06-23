@@ -21,6 +21,8 @@ public class Timer : MonoBehaviour
         interval = startTime;
         uiText = gameObject.GetComponent<TMP_Text>();
         GameEvents.current.onStartGame += StartGame;
+        GameEvents.current.onEndGame += EndGame;
+
 
     }
 
@@ -33,7 +35,7 @@ public class Timer : MonoBehaviour
 
             uiText.SetText(((int)interval).ToString());
 
-            if (interval <= 0) 
+            if (interval <= 0)
             {
                 timerStart = false;
                 GameEvents.current.EndGame();
@@ -66,8 +68,8 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            timerStart = false;
             interval = 0;
+            timerStart = false;
         }
     }
 
@@ -92,6 +94,14 @@ public class Timer : MonoBehaviour
 
         }
         StartCountdown(true, diffStartTime);
+    }
+
+    void EndGame()
+    {
+        interval = 0;
+        uiText.SetText(((int)interval).ToString());
+
+        StartCountdown(false, 0);
     }
 
 }
