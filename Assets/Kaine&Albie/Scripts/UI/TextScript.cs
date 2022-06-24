@@ -41,14 +41,14 @@ public class TextScript : MonoBehaviour
         else if (score < 100)
         {
             // +5 Secs everytime you score
-            timer.gameObject.GetComponent<Timer>().AddTime(5);
+            timer.gameObject.GetComponent<Timer>().AddTime(2);
             // Set text to green when good score
             uiText.color = Color.green;
         }
         else
         {
             // +10 Secs everytime you score
-            timer.gameObject.GetComponent<Timer>().AddTime(10);
+            timer.gameObject.GetComponent<Timer>().AddTime(5);
             // Set text to gold when high score
             Color gold = new Color(255, 215, 0);
             uiText.color = gold;

@@ -46,13 +46,5 @@ public class GameEvents : MonoBehaviour
         easy, normal, hard
     }
 
-    // public event Action<difficulty> onChooseDifficulty;
-    // public void ChooseDifficulty(difficulty diff)
-    // {
-    //     if (onChooseDifficulty != null)
-    //     {
-    //         onChooseDifficulty(diff);
-    //     }
-    // }
 
 }

@@ -8,6 +8,7 @@ TagManager:
   - Timer
   - StartGame
   - Arrow
+  - TestTarget
   layers:
   - Default
   - TransparentFX
